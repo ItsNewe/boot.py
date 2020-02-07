@@ -184,9 +184,9 @@ if __name__ == "__main__":
         try:
             bot.load_extension(extension)
         except Exception as e:
-            exc = "{type(e).__name__}: {e}"
+            exc = f"{type(e).__name__}: {e}"
             print(f"Failed to load extension `{extension}\n{exc}`")
             
-print(f"{bcolors.OKGREEN}Loggin in...!{bcolors.ENDC}")
+print(f"{bcolors.OKGREEN}Logging in...!{bcolors.ENDC}")
 
 bot.run(dbinteraction.dbexec("dstk", log=True))
