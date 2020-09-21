@@ -12,6 +12,24 @@ Konata is a capable and experimental bot, started as a project for me to play ar
 
 ------------
 
+In order to operate correctly, Konata relies on a slqite database, which's schema must be as follows:
+
+```sql
+
+CREATE TABLE tokens(name TEXT PRIMARY KEY NOT NULL, token TEXT); --insert tokens manually
+
+CREATE TABLE users(
+	id TEXT PRIMARY KEY,
+	username TEXT,
+	osuname TEXT,
+	creatime INTEGER
+);
+
+```
+
+
+------------
+
 
 Here are the current commands for it *(new commands are introduced every once in a while)*:
 
