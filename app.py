@@ -178,7 +178,7 @@ async def reload(ctx, extension_name : str):
         return
     await ctx.message.add_reaction('🉑')
 
-initial_extensions = ['simple', "admin", "osu", "audio", "anime", "owner", "dbotsapi", "servmgmt", "audio2"]
+initial_extensions = ['simple', "admin", "osu", "audio", "anime", "owner", "dbotsapi", "servmgmt"]
 if __name__ == "__main__":
     for extension in initial_extensions:
         try:
