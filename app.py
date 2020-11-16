@@ -66,12 +66,11 @@ async def autogmchange():
 @bot.event
 async def on_ready():
     guilds=[]
-    ard=random.randint(1,8)
     print(f"Logged in as {bot.user}, d.py V{discord.__version__}")
     for g in bot.guilds:
         guilds.append(g.name)
-    print("-----------------------------------------------------\n\
-    Connected to: {}\n-----------------------------------------------------".format(" | ".join(guilds)))
+    #print("-----------------------------------------------------\n\
+    #Connected to: {}\n-----------------------------------------------------".format(" | ".join(guilds)))
     bt=bot.loop.create_task(autogmchange())
 
 @bot.event
