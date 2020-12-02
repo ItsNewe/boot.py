@@ -29,7 +29,7 @@ class Osu(commands.Cog):
 			if(raw):
 				await ctx.send(f"**RAW JSON DATA**\n```json\nrj}```")
 			else:
-				em = discord.Embed(title=f"Osu profile for {rj["username"]} *[ID:{rj["user_id"]}]*", color=discord.Color(0xFD00FD))
+				em = discord.Embed(title=f"Osu profile for {rj["username"]}", color=discord.Color(0xFD00FD))
 				em.set_thumbnail(url=f"https://a.ppy.sh/{rj["user_id"]}")
 				em.add_field(name="Level", value=round(float(rj["level"]), 0))
 				em.add_field(name="Country", value=rj["country"])

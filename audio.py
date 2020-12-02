@@ -54,7 +54,7 @@ ytdl_format_options = {
 }
 
 ffmpeg_options = {
-    'before_options': '-nostdin',
+    'before_options': '-nostdin -reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',
     'options': '-vn'
 }
 
