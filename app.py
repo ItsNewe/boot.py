@@ -1,5 +1,6 @@
 #-*- coding: utf-8 -*-
 import discord
+from os import getenv
 import logging
 import sys, traceback
 import random
@@ -189,4 +190,5 @@ if __name__ == "__main__":
 			
 print(f"{bcolors.OKGREEN}Logging in...!{bcolors.ENDC}")
 
-bot.run(dbinteraction.dbexec("dstk", log=True))
+bot.run(getenv('DISCORD_TOKEN')) #Heroku login
+#dbinteraction.dbexec("dstk", log=True) <- local login
