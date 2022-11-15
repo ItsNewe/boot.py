@@ -17,7 +17,7 @@ class ServerManagement(commands.Cog):
 			"SELECT role from serverdata WHERE server_id = ?", (ctx.guild.id,)
 		)
 		em = None
-		if exists == None:
+		if exists is None:
 			em = discord.Embed(
 				title="Autorole is disabled for this guild.",
 				color=discord.Color(0xFF0000),
@@ -39,10 +39,10 @@ class ServerManagement(commands.Cog):
 		)
 		print(f"status, role : enabled {role.id}")
 		try:
-			if role == None:
+			if role is None:
 				await ctx.send("No role provided")
 			else:
-				if exists != None:
+				if exists is not None:
 					dbinteraction.dbexec(
 						"UPDATE serverdata SET role = ? WHERE server_id = ?",
 						(role.id, ctx.guild.id),
@@ -68,7 +68,7 @@ class ServerManagement(commands.Cog):
 			"SELECT role from serverdata WHERE server_id = ?", (ctx.guild.id,)
 		)
 		print("disab")
-		if exists != None:
+		if exists is not None:
 			try:
 				dbinteraction.dbexec(
 					"DELETE FROM serverdata WHERE server_id = ?", (ctx.guild.id,)
@@ -155,7 +155,7 @@ class ServerManagement(commands.Cog):
 			"SELECT usrmaderole from serverdata WHERE server_id = ?", (ctx.guild.id,)
 		)
 		try:
-			if exists != None:
+			if exists is not None:
 				dbinteraction.dbexec(
 					"UPDATE serverdata SET usrmaderole = 1 WHERE server_id = ?",
 					(ctx.guild.id,),
