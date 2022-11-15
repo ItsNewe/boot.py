@@ -9,7 +9,7 @@ def dbexec(query, arg=None, f=True, log=False, db="stor"):
         if arg:
             c.execute(query, arg)
 
-        elif(log==True):
+        elif(log is True):
             c.execute(f"SELECT token FROM tokens WHERE name = '{query}'")
 
         else:
@@ -19,7 +19,7 @@ def dbexec(query, arg=None, f=True, log=False, db="stor"):
             az = c.fetchone()
             conn.commit()
             conn.close()
-            if az!=None and az[0]:
+            if az is not None and az[0]:
                 return(az[0])
             else:
                 return None
