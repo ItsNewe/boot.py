@@ -101,7 +101,7 @@ class Simple(commands.Cog):
     #         await ctx.send("User `{}` not found.".format(a))
     #         return
     #     except(Exception):
-    #         await ctx.send("An error occured, please contact **Newe#6184** with the following message```py\n{}```".format(Exception))
+    #         await ctx.send("An error occured with the following message:```py\n{}```".format(Exception))
     #         return
 
     @commands.command()
