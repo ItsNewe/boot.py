@@ -44,7 +44,7 @@ python-dateutil==2.8.1
 pytz==2019.3
 ratelimiter==1.2.0.post0
 regex==2020.1.8
-requests==2.22.0
+requests==2.31.0
 rsa==4.7
 schedule==0.6.0
 six==1.14.0
