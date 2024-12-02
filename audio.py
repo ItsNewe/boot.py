@@ -100,7 +100,7 @@ class Audio(commands.Cog):
     async def summon(self, ctx, channel=None):
         """Brings the bot to your voice channel"""
 
-        if ctx.message.author.voice.channel != None:
+        if ctx.message.author.voice.channel is not None:
             channel=ctx.message.author.voice.channel
             if ctx.voice_client is not None:
                 return await ctx.voice_client.move_to(channel)
@@ -122,7 +122,7 @@ class Audio(commands.Cog):
     async def skip(self, ctx):
         """Skips the currently playing song"""
 
-        if ctx.message.author.voice.channel != None:
+        if ctx.message.author.voice.channel is not None:
             if ctx.voice_client.is_playing():
                 ctx.voice_client.stop()
                 await ctx.send("Skipped the current song.")
@@ -134,7 +134,7 @@ class Audio(commands.Cog):
         """Plays the specified song"""
         
         try:
-            if(ctx.message.author.voice.channel != None):
+            if(ctx.message.author.voice.channel is not None):
 
                 def autodisco(error):
                     coro = ctx.voice_client.disconnect()

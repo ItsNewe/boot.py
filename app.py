@@ -136,7 +136,7 @@ async def on_guild_remove(guild):
 @bot.event
 async def on_member_join(member):
 	a=dbinteraction.dbexec("SELECT role FROM serverdata WHERE server_id = ?", (member.guild.id,))
-	if a!=None:
+	if a is not None:
 		role = discord.utils.get(member.guild.roles, id=a)
 		await member.add_roles(role, reason="[KONA] Autorole")
 

@@ -131,7 +131,7 @@ class Simple(commands.Cog):
 
         yesno=dbexec("SELECT * FROM users WHERE id=?", (ctx.message.author.id,))
 
-        if yesno==None:
+        if yesno is None:
             v=(ctx.message.author.id, ctx.message.author.name)
             a=dbexec("INSERT INTO users VALUES (?,?,?,?)",(v, None, time.time(),), f=False)
             if a=="err":
